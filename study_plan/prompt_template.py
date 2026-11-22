@@ -99,9 +99,16 @@ def build_prompt_v3_optimized_guardrails(plan_input: StudyPlanInput) -> str:
             )
         else:
             allowed_subs = [s.name for s in plan_input.subjects if d <= s.exam_date]
+            if budget % 60 == 0 and budget >= 120:
+                arithmetic_hint = f"Exact session breakdown: 2 sessions of {budget // 2}m each, or {budget // 60} sessions of 60m"
+            elif budget % 45 == 0 and budget >= 90:
+                arithmetic_hint = f"Exact session breakdown: {budget // 45} sessions of 45m"
+            else:
+                arithmetic_hint = f"Total sum of durations must be <= {budget}m"
+
             budgets_text_lines.append(
-                f"- Date {d}: {budget} minutes available. Allowed subjects: {allowed_subs}. "
-                f"Schedule 1 or 2 sessions. Total duration across sessions must be <= {budget} min."
+                f"- Date {d}: Available budget is EXACTLY {budget} minutes. Allowed subjects: {allowed_subs}. "
+                f"Schedule 1, 2 or 3 sessions ({arithmetic_hint}). Total duration across sessions MUST NOT exceed {budget} min."
             )
     budgets_text = "\n".join(budgets_text_lines)
 
@@ -143,9 +150,13 @@ Your task is to generate a day-by-day personalized exam study plan for a univers
      {{"date": "YYYY-MM-DD", "sessions": []}}
    - Do NOT omit zero-minute dates from the "schedule" list!
 
-3. STRICT DAILY TIME BUDGET:
-   - On any given date, the sum of "duration_minutes" across all sessions MUST NOT exceed that date's available budget.
-   - Sessions should realistically utilize the available budget without overrunning it.
+3. STRICT DAILY TIME BUDGET (ZERO TOLERANCE FOR OVERRUNS):
+   - On any given date, sum(duration_minutes) across all sessions MUST BE LESS THAN OR EQUAL TO that date's available budget.
+   - Explicit daily arithmetic limits:
+     * If budget is 180 min: use two 90m sessions (90+90=180), OR three 60m sessions (60+60+60=180), OR four 45m sessions (45*4=180).
+     * If budget is 240 min: use two 120m sessions or four 60m sessions.
+     * If budget is 210 min: use one 90m + two 60m sessions.
+   - NEVER emit sessions summing to 195 min or exceeding the daily budget. Overruns will trigger validation rejection. Keep sum <= daily budget.
 
 4. POST-EXAM SCHEDULING RULE:
    - NEVER schedule any study session for a subject AFTER its exam date.

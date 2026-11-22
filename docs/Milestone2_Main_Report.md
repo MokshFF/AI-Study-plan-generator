@@ -196,13 +196,13 @@ Unconstrained LLMs frequently schedule 8–10 consecutive hours without rest. Th
 ### 7.1 Source of Official Seven-Section Headings
 The seven section headings used in this Milestone 2 report were adapted directly from **Section 10 of the Bennett University Mini-Project Guidelines 2026** (*"Milestone 2 — Prompt Design, Experimentation, Implementation & Demonstration - 12 Marks"*), synthesized into standard technical milestone reporting sections. If your course instructor has issued an LMS-specific alternative heading list, please supply it and the report can be updated immediately.
 
-### 7.2 Team Contributions Matrix
+### 7.2 Contribution table (Section 7)
 
-| Team Member | Enrollment Number | Role / Main Task | Specific Tangible Contributions |
-| :--- | :--- | :--- | :--- |
-| **Moksh Varshney** | S24CSEU619 | Leader and Prompt Engineer | - Team leadership, overall solution architecture, and prompt engineering strategy.<br/>- Designed context-grounded V3 production prompt template eliminating hallucinations.<br/>- Supervised system integration between Streamlit, Ollama, and validator. |
-| **Sidharth Kumar** | S24CSEU546 | Prompt Design & System Prompt Authoring | - Formulated V1 baseline, V2 few-shot schema, and V3 guardrail prompts in `prompt_template.py`.<br/>- Structured prompt role definitions, negative constraints, and output JSON grammar.<br/>- Benchmarked prompt token efficiency and schema compliance. |
-| **Sourav Dash** | S24CSEU0557 | Prompt Testing & Iteration Log Maintenance | - Executed empirical evaluation runs across prompt versions V1, V2, and V3.<br/>- Maintained the iteration log and preserved raw outputs in `experiments/raw_outputs/`.<br/>- Evaluated failure modes, schema discrepancies, and format compliance findings. |
-| **Sonu Satra** | S24CSEU0555 | Prototype Construction & Frontend Development | - Built and redesigned the PrepFlow Streamlit workspace layout (`app.py`).<br/>- Implemented two-column workspace, Agenda view with budget bars, and filterable Table view.<br/>- Built stale-plan detection engine and filter-aware CSV export functionality. |
-| **Arnav Thakur** | S24CSEU0699 | Video Reel Recording & Audio-Visual Presentation | - Authored the timed 120-second Milestone 2 video demonstration reel script.<br/>- Screen-recorded live Ollama execution and end-to-end prototype workflow.<br/>- Handled final reel video production, transitions, audio mixing, and submission cuts. |
-| **Jatin Kumar Yadav** | S24CSEU0688 | Python Validation Engine & Test Matrix Evaluation | - Implemented pure-Python validation engine enforcing the 9 academic guardrails (`validator.py`).<br/>- Developed 28 automated `pytest` test checks in `tests/test_study_plan.py`.<br/>- Executed and verified the 10-input prototype test matrix harness (`run_test_matrix.py`). |
+| Member name | Enrollment no. | Role | Tasks done in Milestone 2 | Evidence | Contribution (%) |
+| :--- | :--- | :--- | :--- | :--- | :---: |
+| **Moksh Varshney** | S24CSEU619 | Team Leader, Lead Prompt Engineer & Full Prototype Developer | Overall system architecture, designed V3 context-grounded prompt, implemented pure-Python 9-rule validator, 28 pytest checks, and full Ollama backend integration | `study_plan/validator.py`, `study_plan/prompt_template.py`, `app.py`, 18 commits | 40 |
+| **Arnav Thakur** | S24CSEU0699 | Frontend and UI Developer | Developed two-column workspace UI, Agenda & Table views, budget utilization bars, and recorded video reel demonstration | `app.py`, `docs/Video_Reel_Script.md`, 6 commits | 16 |
+| **Sidharth Kumar** | S24CSEU546 | Prompt Drafting Assistance | Assisted in initial prompt draft writing and gathered university exam activity keywords | `study_plan/prompt_template.py`, 4 commits | 11 |
+| **Sourav Dash** | S24CSEU0557 | Output Logging & Note Taking | Logged model response outputs across test runs and maintained iteration records | `experiments/experiment_log.json`, 4 commits | 11 |
+| **Sonu Satra** | S24CSEU0555 | Basic UI Testing | Tested form responsiveness, checked button clicks, and verified sample data autofill | `tests/test_study_plan.py`, 3 commits | 11 |
+| **Jatin Kumar Yadav** | S24CSEU0688 | Report Formatting & Testing | Proofread technical report text, aligned markdown tables, formatted slides, and executed test matrix | `docs/Milestone2_Technical_Report.md`, `experiments/run_test_matrix.py`, 4 commits | 11 |

@@ -573,11 +573,12 @@ with st.expander("⚙️ Model Configuration & Host Settings", expanded=False):
             "Prompt Guardrail Strategy",
             options=["v3", "v2", "v1"],
             format_func=lambda x: {
-                "v3": "V3: Grounded Guardrails (Production)",
-                "v2": "V2: Few-Shot Schema (Experimental)",
-                "v1": "V1: Zero-Shot Baseline (Milestone 1)",
+                "v3": "V3: Grounded Guardrails (Production - Recommended)",
+                "v2": "V2: Few-Shot Schema (Milestone 2 Comparison)",
+                "v1": "V1: Zero-Shot Baseline (Milestone 1 Baseline)",
             }[x],
             index=0,
+            help="V3 uses dynamic per-date grounding and negative guardrails. V1 and V2 are preserved for rubric comparison and will be auto-aligned if executed.",
         )
         st.session_state.prompt_version = chosen_prompt
 
@@ -975,7 +976,26 @@ if st.session_state.app_view_mode == "Planner Workspace":
                     method_label = "V3 Grounded Guardrails (Cloud Benchmark Output)"
 
                 st.write("Verifying schedule with pure-Python academic validator (9 rules)...")
-                val_result = validate_plan_output(raw_resp, current_plan_input)
+                raw_val = validate_plan_output(raw_resp, current_plan_input, auto_repair=False)
+
+                if raw_val.is_valid:
+                    val_result = raw_val
+                    st.session_state.was_auto_repaired = False
+                    st.session_state.repair_count = 0
+                else:
+                    # Small language model outputs may have minor arithmetic drift (e.g. 195m vs 180m)
+                    # or V1/V2 baseline schema drift. We invoke our intelligent constraint normalizer:
+                    st.write("⚡ Applying pure-Python intelligent auto-alignment engine...")
+                    repaired_val = validate_plan_output(raw_resp, current_plan_input, auto_repair=True)
+                    if repaired_val.is_valid:
+                        val_result = repaired_val
+                        st.session_state.was_auto_repaired = True
+                        st.session_state.repair_count = len(raw_val.errors)
+                    else:
+                        val_result = raw_val
+                        st.session_state.was_auto_repaired = False
+                        st.session_state.repair_count = 0
+
                 st.session_state.active_plan_result = val_result
                 st.session_state.last_execution_sec = elapsed_sec
                 st.session_state.last_raw_response = raw_resp
@@ -994,6 +1014,11 @@ if st.session_state.app_view_mode == "Planner Workspace":
 
                 # Log completed experiment run
                 total_sched_mins = sum(d.used_minutes for d in val_result.schedule)
+                if getattr(st.session_state, "was_auto_repaired", False):
+                    run_notes = f"Interactive generation via {st.session_state.prompt_version} (auto-aligned {st.session_state.repair_count} LLM drift item(s))"
+                else:
+                    run_notes = f"Interactive generation via {st.session_state.prompt_version}" if is_ollama_online else f"Cloud benchmark demonstration via {st.session_state.prompt_version}"
+
                 log_completed_run(
                     engine="Local Ollama" if is_ollama_online else "Cloud Benchmark",
                     model=model_tag,
@@ -1004,12 +1029,16 @@ if st.session_state.app_view_mode == "Planner Workspace":
                     warnings_count=len(val_result.warnings),
                     total_minutes=total_sched_mins,
                     execution_time_sec=round(elapsed_sec, 1),
-                    notes=f"Interactive generation via {st.session_state.prompt_version}" if is_ollama_online else f"Cloud benchmark demonstration via {st.session_state.prompt_version}",
+                    notes=run_notes,
                 )
 
                 if val_result.is_valid:
-                    status_box.update(label=f"Study plan generated and verified in {elapsed_sec:.1f}s!", state="complete", expanded=False)
-                    st.toast("Your personalized study plan is ready!", icon="🎉")
+                    if getattr(st.session_state, "was_auto_repaired", False):
+                        status_box.update(label=f"Study plan generated and auto-aligned in {elapsed_sec:.1f}s!", state="complete", expanded=False)
+                        st.toast("Study plan generated & auto-aligned to constraints!", icon="⚡")
+                    else:
+                        status_box.update(label=f"Study plan generated and verified in {elapsed_sec:.1f}s!", state="complete", expanded=False)
+                        st.toast("Your personalized study plan is ready!", icon="🎉")
                 else:
                     status_box.update(label=f"Plan generated with {len(val_result.errors)} rule violations.", state="error", expanded=True)
 
@@ -1068,9 +1097,43 @@ if st.session_state.app_view_mode == "Planner Workspace":
             st.error("🚨 **Plan Validation Rejected!** The generated timetable violated academic scheduling constraints:")
             for err in plan_res.errors:
                 st.markdown(f"- ❌ {err}")
+
+            act_c1, act_c2 = st.columns(2)
+            with act_c1:
+                if st.button("🛠️ Auto-Align & Repair Timetable Now", type="primary", use_container_width=True):
+                    rep = validate_plan_output(st.session_state.last_raw_response or "", current_plan_input, auto_repair=True)
+                    if rep.is_valid:
+                        st.session_state.active_plan_result = rep
+                        st.session_state.was_auto_repaired = True
+                        st.session_state.repair_count = len(plan_res.errors)
+                        st.rerun()
+            with act_c2:
+                if st.button("📋 Load Verified Benchmark Timetable", use_container_width=True):
+                    demo_res = validate_plan_output(FIXTURE_VALID_RESPONSE_JSON, current_plan_input, auto_repair=False)
+                    st.session_state.active_plan_result = demo_res
+                    st.session_state.last_raw_response = FIXTURE_VALID_RESPONSE_JSON
+                    st.session_state.was_auto_repaired = False
+                    st.session_state.repair_count = 0
+                    st.rerun()
+
             with st.expander("Inspect Raw JSON Response"):
                 st.code(st.session_state.last_raw_response or "", language="json")
         else:
+            if getattr(st.session_state, "was_auto_repaired", False):
+                st.markdown(
+                    """
+                    <div style="background: rgba(59, 130, 246, 0.12); border: 1px solid rgba(59, 130, 246, 0.35); border-radius: 10px; padding: 12px 18px; margin-bottom: 16px; display: flex; align-items: center; gap: 14px;">
+                        <span style="font-size: 1.5rem;">⚡</span>
+                        <div>
+                            <strong style="color: #60A5FA; font-size: 0.95rem;">Intelligent Constraint Auto-Alignment Applied:</strong>
+                            <span style="color: #CBD5E1; font-size: 0.85rem; display: block; margin-top: 2px;">
+                                The local language model generated a schedule with minor arithmetic or integer drift. Our pure-Python academic constraint engine automatically clamped durations and aligned dates to strictly satisfy your configured daily budgets and exam dates.
+                            </span>
+                        </div>
+                    </div>
+                    """,
+                    unsafe_allow_html=True,
+                )
             # Calculate metrics from validated schedule
             total_active_mins = sum(d.used_minutes for d in plan_res.schedule)
             total_sched_hours = round(total_active_mins / 60.0, 1)
@@ -1293,9 +1356,10 @@ elif st.session_state.app_view_mode == "Validation Lab":
             height=200,
             placeholder='{\n  "schedule": [\n    {\n      "date": "2026-12-01",\n      "sessions": []\n    }\n  ]\n}',
         )
+        auto_rep_audit = st.checkbox("Enable Pure-Python Auto-Repair Engine (Auto-Align Violations)", value=False)
         if st.button("🔎 Audit Pasted JSON", type="primary"):
             sample_in = get_sample_input()
-            audit_res = validate_plan_output(pasted_json, sample_in)
+            audit_res = validate_plan_output(pasted_json, sample_in, auto_repair=auto_rep_audit)
             if audit_res.is_valid:
                 st.success("🎉 **PASS: Schedule satisfied all 9 academic constraints!**")
                 st.metric("Validated Calendar Days", len(audit_res.schedule))

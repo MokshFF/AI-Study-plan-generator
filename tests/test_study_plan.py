@@ -418,3 +418,80 @@ def test_experiment_logger_records_completed_run(tmp_path):
             md_text = f.read()
             assert "qwen3:4b" in md_text
             assert "PASS" in md_text
+
+
+# ---------------------------------------------------------------------------
+# 6. AUTO-REPAIR & CONSTRAINT NORMALIZER TESTS
+# ---------------------------------------------------------------------------
+
+def test_auto_repair_clamps_budget_overrun():
+    """Verify that auto_repair=True clamps minor budget overruns to exact available minutes."""
+    sample = get_sample_input()
+    data = json.loads(FIXTURE_VALID_RESPONSE_JSON)
+    # Inject 195 min on 2026-12-05 (which has 180m budget)
+    for d in data["schedule"]:
+        if d["date"] == "2026-12-05":
+            d["sessions"] = [
+                {"subject": "Data Structures & Algorithms", "activity": "Revision", "task": "Formulas", "duration_minutes": 90},
+                {"subject": "Data Structures & Algorithms", "activity": "Practice", "task": "Trees", "duration_minutes": 105},
+            ]
+    raw_payload = json.dumps(data)
+
+    # Strict mode catches the overrun
+    strict_res = validate_plan_output(raw_payload, sample, auto_repair=False)
+    assert strict_res.is_valid is False
+    assert any("budget overrun" in e.lower() for e in strict_res.errors)
+
+    # Auto-repair mode clamps to 180 min
+    repaired_res = validate_plan_output(raw_payload, sample, auto_repair=True)
+    assert repaired_res.is_valid is True
+    assert repaired_res.errors == []
+    dec5 = [d for d in repaired_res.schedule if d.date == "2026-12-05"][0]
+    assert dec5.used_minutes == 180
+    assert any("auto-aligned" in w.lower() for w in repaired_res.warnings)
+
+
+def test_auto_repair_clears_zero_minute_rest_day_sessions():
+    """Verify that auto_repair=True clears sessions on scheduled rest days."""
+    sample = get_sample_input()
+    # FIXTURE_INVALID_REST_DAY_JSON has study sessions on 2026-12-06 (rest day)
+    strict_res = validate_plan_output(FIXTURE_INVALID_REST_DAY_JSON, sample, auto_repair=False)
+    assert strict_res.is_valid is False
+
+    repaired_res = validate_plan_output(FIXTURE_INVALID_REST_DAY_JSON, sample, auto_repair=True)
+    assert repaired_res.is_valid is True
+    dec6 = [d for d in repaired_res.schedule if d.date == "2026-12-06"][0]
+    assert dec6.used_minutes == 0
+    assert dec6.sessions == []
+
+
+def test_auto_repair_reallocates_post_exam_sessions():
+    """Verify that auto_repair=True reallocates post-exam sessions to active subjects."""
+    sample = get_sample_input()
+    # FIXTURE_INVALID_POST_EXAM_JSON has DSA sessions after its Dec 5 exam
+    strict_res = validate_plan_output(FIXTURE_INVALID_POST_EXAM_JSON, sample, auto_repair=False)
+    assert strict_res.is_valid is False
+
+    repaired_res = validate_plan_output(FIXTURE_INVALID_POST_EXAM_JSON, sample, auto_repair=True)
+    assert repaired_res.is_valid is True
+    # Verify no DSA sessions exist after Dec 5
+    for day in repaired_res.schedule:
+        if day.date > "2026-12-05":
+            for s in day.sessions:
+                assert s.subject != "Data Structures & Algorithms"
+
+
+def test_auto_repair_normalizes_v1_markdown_table():
+    """Verify that auto_repair=True can extract and normalize markdown tables into valid schedules."""
+    sample = get_sample_input()
+    md_table = """
+| Date | Subject | Task Description | Duration (Minutes) |
+| 2026-12-01 | Data Structures & Algorithms | Dynamic Programming | 90 |
+| 2026-12-01 | Operating Systems | Virtual Memory | 90 |
+| 2026-12-02 | Data Structures & Algorithms | Graphs | 90 |
+| 2026-12-02 | Database Management Systems | Normalization | 90 |
+    """
+    repaired_res = validate_plan_output(md_table, sample, auto_repair=True)
+    assert repaired_res.is_valid is True
+    assert len(repaired_res.schedule) == 14
+

@@ -269,3 +269,4 @@ def build_pdf(md_filename: str, pdf_filename: str):
 if __name__ == "__main__":
     build_pdf("Milestone2_Main_Report.md", "Milestone2_Main_Report.pdf")
     build_pdf("Milestone2_Technical_Report.md", "Milestone2_Technical_Report.pdf")
+    build_pdf("Milestone2_Prescribed_Report.md", "Milestone2_Prescribed_Report.pdf")

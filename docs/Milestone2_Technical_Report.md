@@ -15,7 +15,7 @@
 | :--- | :--- |
 | **Problem ID** | **C20** (AI-Powered Personalized Study Plan Generator) |
 | **Team ID** | `[Team ID: Team-XX]` *(To be confirmed by instructor)* |
-| **Team Roster & Tasks** | 1. **Moksh Varshney** (S24CSEU619) — Leader & Prompt Engineer<br/>2. **Sidharth Kumar** (S24CSEU546) — Prompt Design & System Prompt Authoring<br/>3. **Sourav Dash** (S24CSEU0557) — Prompt Testing & Iteration Log Maintenance<br/>4. **Sonu Satra** (S24CSEU0555) — Prototype Construction & Frontend Development<br/>5. **Arnav Thakur** (S24CSEU0699) — Video Reel Recording & Audio-Visual Presentation<br/>6. **Jatin Kumar Yadav** (S24CSEU0688) — Python Validation Engine & Test Matrix Evaluation |
+| **Team Roster & Tasks** | 1. **Moksh Varshney** (S24CSEU619) — Team Leader, lead prompt engineer, and full prototype developer<br/>2. **Sidharth Kumar** (S24CSEU546) — Assisting in initial prompt draft writing and keyword collection<br/>3. **Sourav Dash** (S24CSEU0557) — Logging model response outputs and note-taking<br/>4. **Sonu Satra** (S24CSEU0555) — Basic UI testing and checking form responsiveness<br/>5. **Arnav Thakur** (S24CSEU0699) — Frontend and UI developer<br/>6. **Jatin Kumar Yadav** (S24CSEU0688) — Proofreading report text, formatting presentation slides, and testing |
 | **Target User Base** | University undergraduate students preparing simultaneously for multiple end-term examinations |
 | **Target Hardware** | Standard consumer laptops (CPU-only execution via quantized local LLMs) |
 | **Execution Engine** | 100% Local Inference via Ollama (`qwen2.5:1.5b` default / `qwen3:4b` configurable) |
@@ -252,3 +252,16 @@ Milestone 2 successfully demonstrates that an AI-powered personalized study plan
 1. **iCalendar (.ics) Export**: One-click timetable export directly to Google Calendar and Microsoft Outlook.
 2. **Interactive Drag-and-Drop Adjustment**: Enabling students to reorder sessions in the UI while retaining live validator checks.
 3. **Multi-Model Benchmark Expansion**: Benchmarking `llama3.2:1b`, `qwen2.5:3b`, and `mistral:7b` for speed-accuracy tradeoffs.
+
+---
+
+## Contribution table (Section 7)
+
+| Member name | Enrollment no. | Role | Tasks done in Milestone 2 | Evidence | Contribution (%) |
+| :--- | :--- | :--- | :--- | :--- | :---: |
+| **Moksh Varshney** | S24CSEU619 | Team Leader, Lead Prompt Engineer & Full Prototype Developer | Overall system architecture, designed V3 context-grounded prompt, implemented pure-Python 9-rule validator, 28 pytest checks, and full Ollama backend integration | `study_plan/validator.py`, `study_plan/prompt_template.py`, `app.py`, 18 commits | 40 |
+| **Arnav Thakur** | S24CSEU0699 | Frontend and UI Developer | Developed two-column workspace UI, Agenda & Table views, budget utilization bars, and recorded video reel demonstration | `app.py`, `docs/Video_Reel_Script.md`, 6 commits | 16 |
+| **Sidharth Kumar** | S24CSEU546 | Prompt Drafting Assistance | Assisted in initial prompt draft writing and gathered university exam activity keywords | `study_plan/prompt_template.py`, 4 commits | 11 |
+| **Sourav Dash** | S24CSEU0557 | Output Logging & Note Taking | Logged model response outputs across test runs and maintained iteration records | `experiments/experiment_log.json`, 4 commits | 11 |
+| **Sonu Satra** | S24CSEU0555 | Basic UI Testing | Tested form responsiveness, checked button clicks, and verified sample data autofill | `tests/test_study_plan.py`, 3 commits | 11 |
+| **Jatin Kumar Yadav** | S24CSEU0688 | Report Formatting & Testing | Proofread technical report text, aligned markdown tables, formatted slides, and executed test matrix | `docs/Milestone2_Technical_Report.md`, `experiments/run_test_matrix.py`, 4 commits | 11 |

@@ -166,5 +166,47 @@
     "total_minutes_scheduled": 1230,
     "latency_seconds": 95.9,
     "notes": "Interactive generation via v3"
+  },
+  {
+    "run_id": 13,
+    "timestamp": "2026-11-22 13:41:38",
+    "engine": "Local Ollama",
+    "model": "Ollama (qwen2.5:1.5b)",
+    "prompt_version": "v1",
+    "dataset": "User Planner Configuration",
+    "status": "FAIL",
+    "errors_count": 1,
+    "warnings_count": 0,
+    "total_minutes_scheduled": 0,
+    "latency_seconds": 69.3,
+    "notes": "Interactive generation via v1"
+  },
+  {
+    "run_id": 14,
+    "timestamp": "2026-11-22 13:55:43",
+    "engine": "Local Ollama",
+    "model": "Ollama (qwen2.5:1.5b)",
+    "prompt_version": "v2",
+    "dataset": "User Planner Configuration",
+    "status": "FAIL",
+    "errors_count": 7,
+    "warnings_count": 3,
+    "total_minutes_scheduled": 2580,
+    "latency_seconds": 55.7,
+    "notes": "Interactive generation via v2"
+  },
+  {
+    "run_id": 15,
+    "timestamp": "2026-11-22 13:57:25",
+    "engine": "Local Ollama",
+    "model": "Ollama (qwen2.5:1.5b)",
+    "prompt_version": "v3",
+    "dataset": "User Planner Configuration",
+    "status": "FAIL",
+    "errors_count": 1,
+    "warnings_count": 10,
+    "total_minutes_scheduled": 1515,
+    "latency_seconds": 83.4,
+    "notes": "Interactive generation via v3"
   }
 ]
