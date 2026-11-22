@@ -1,0 +1,55 @@
+{
+  "schedule": [
+    {
+      "date": "2026-12-01",
+      "sessions": [
+        {
+          "subject": "Computer Networks",
+          "activity": "Practice",
+          "task": "Solve TCP Congestion Control problems",
+          "duration_minutes": 60
+        },
+        {
+          "subject": "Computer Networks",
+          "activity": "Practice",
+          "task": "Review IP Subnetting concepts",
+          "duration_minutes": 60
+        }
+      ]
+    },
+    {
+      "date": "2026-12-02",
+      "sessions": [
+        {
+          "subject": "Computer Networks",
+          "activity": "Practice",
+          "task": "Practice Sliding Window Protocol",
+          "duration_minutes": 60
+        },
+        {
+          "subject": "Computer Networks",
+          "activity": "Practice",
+          "task": "Review Sliding Window Protocol",
+          "duration_minutes": 60
+        }
+      ]
+    },
+    {
+      "date": "2026-12-03",
+      "sessions": [
+        {
+          "subject": "Computer Networks",
+          "activity": "Practice",
+          "task": "Practice Dynamic Programming problems related to Network Security",
+          "duration_minutes": 60
+        },
+        {
+          "subject": "Computer Networks",
+          "activity": "Practice",
+          "task": "Review Sliding Window Protocol in the context of Network Congestion Control",
+          "duration_minutes": 60
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,298 @@
+{
+  "dates": [
+    {
+      "date": "2026-12-01",
+      "sessions": [
+        {
+          "subject": "Data Structures & Algorithms",
+          "time": "09:00 - 10:00"
+        },
+        {
+          "subject": "Database Management Systems",
+          "time": "10:00 - 11:00"
+        },
+        {
+          "subject": "Operating Systems",
+          "time": "11:00 - 12:00"
+        },
+        {
+          "subject": "Natural Language Processing",
+          "time": "12:00 - 13:00"
+        }
+      ]
+    },
+    {
+      "date": "2026-12-02",
+      "sessions": [
+        {
+          "subject": "Data Structures & Algorithms",
+          "time": "09:00 - 10:00"
+        },
+        {
+          "subject": "Database Management Systems",
+          "time": "10:00 - 11:00"
+        },
+        {
+          "subject": "Operating Systems",
+          "time": "11:00 - 12:00"
+        },
+        {
+          "subject": "Natural Language Processing",
+          "time": "12:00 - 13:00"
+        }
+      ]
+    },
+    {
+      "date": "2026-12-03",
+      "sessions": [
+        {
+          "subject": "Data Structures & Algorithms",
+          "time": "09:00 - 10:00"
+        },
+        {
+          "subject": "Database Management Systems",
+          "time": "10:00 - 11:00"
+        },
+        {
+          "subject": "Operating Systems",
+          "time": "11:00 - 12:00"
+        },
+        {
+          "subject": "Natural Language Processing",
+          "time": "12:00 - 13:00"
+        }
+      ]
+    },
+    {
+      "date": "2026-12-04",
+      "sessions": [
+        {
+          "subject": "Data Structures & Algorithms",
+          "time": "09:00 - 10:00"
+        },
+        {
+          "subject": "Database Management Systems",
+          "time": "10:00 - 11:00"
+        },
+        {
+          "subject": "Operating Systems",
+          "time": "11:00 - 12:00"
+        },
+        {
+          "subject": "Natural Language Processing",
+          "time": "12:00 - 13:00"
+        }
+      ]
+    },
+    {
+      "date": "2026-12-05",
+      "sessions": [
+        {
+          "subject": "Data Structures & Algorithms",
+          "time": "09:00 - 10:00"
+        },
+        {
+          "subject": "Database Management Systems",
+          "time": "10:00 - 11:00"
+        },
+        {
+          "subject": "Operating Systems",
+          "time": "11:00 - 12:00"
+        },
+        {
+          "subject": "Natural Language Processing",
+          "time": "12:00 - 13:00"
+        }
+      ]
+    },
+    {
+      "date": "2026-12-06",
+      "sessions": [
+        {
+          "subject": "Data Structures & Algorithms",
+          "time": "09:00 - 10:00"
+        },
+        {
+          "subject": "Database Management Systems",
+          "time": "10:00 - 11:00"
+        },
+        {
+          "subject": "Operating Systems",
+          "time": "11:00 - 12:00"
+        },
+        {
+          "subject": "Natural Language Processing",
+          "time": "12:00 - 13:00"
+        }
+      ]
+    },
+    {
+      "date": "2026-12-07",
+      "sessions": [
+        {
+          "subject": "Data Structures & Algorithms",
+          "time": "09:00 - 10:00"
+        },
+        {
+          "subject": "Database Management Systems",
+          "time": "10:00 - 11:00"
+        },
+        {
+          "subject": "Operating Systems",
+          "time": "11:00 - 12:00"
+        },
+        {
+          "subject": "Natural Language Processing",
+          "time": "12:00 - 13:00"
+        }
+      ]
+    },
+    {
+      "date": "2026-12-08",
+      "sessions": [
+        {
+          "subject": "Data Structures & Algorithms",
+          "time": "09:00 - 10:00"
+        },
+        {
+          "subject": "Database Management Systems",
+          "time": "10:00 - 11:00"
+        },
+        {
+          "subject": "Operating Systems",
+          "time": "11:00 - 12:00"
+        },
+        {
+          "subject": "Natural Language Processing",
+          "time": "12:00 - 13:00"
+        }
+      ]
+    },
+    {
+      "date": "2026-12-09",
+      "sessions": [
+        {
+          "subject": "Data Structures & Algorithms",
+          "time": "09:00 - 10:00"
+        },
+        {
+          "subject": "Database Management Systems",
+          "time": "10:00 - 11:00"
+        },
+        {
+          "subject": "Operating Systems",
+          "time": "11:00 - 12:00"
+        },
+        {
+          "subject": "Natural Language Processing",
+          "time": "12:00 - 13:00"
+        }
+      ]
+    },
+    {
+      "date": "2026-12-10",
+      "sessions": [
+        {
+          "subject": "Data Structures & Algorithms",
+          "time": "09:00 - 10:00"
+        },
+        {
+          "subject": "Database Management Systems",
+          "time": "10:00 - 11:00"
+        },
+        {
+          "subject": "Operating Systems",
+          "time": "11:00 - 12:00"
+        },
+        {
+          "subject": "Natural Language Processing",
+          "time": "12:00 - 13:00"
+        }
+      ]
+    },
+    {
+      "date": "2026-12-11",
+      "sessions": [
+        {
+          "subject": "Data Structures & Algorithms",
+          "time": "09:00 - 10:00"
+        },
+        {
+          "subject": "Database Management Systems",
+          "time": "10:00 - 11:00"
+        },
+        {
+          "subject": "Operating Systems",
+          "time": "11:00 - 12:00"
+        },
+        {
+          "subject": "Natural Language Processing",
+          "time": "12:00 - 13:00"
+        }
+      ]
+    },
+    {
+      "date": "2026-12-12",
+      "sessions": [
+        {
+          "subject": "Data Structures & Algorithms",
+          "time": "09:00 - 10:00"
+        },
+        {
+          "subject": "Database Management Systems",
+          "time": "10:00 - 11:00"
+        },
+        {
+          "subject": "Operating Systems",
+          "time": "11:00 - 12:00"
+        },
+        {
+          "subject": "Natural Language Processing",
+          "time": "12:00 - 13:00"
+        }
+      ]
+    },
+    {
+      "date": "2026-12-13",
+      "sessions": [
+        {
+          "subject": "Data Structures & Algorithms",
+          "time": "09:00 - 10:00"
+        },
+        {
+          "subject": "Database Management Systems",
+          "time": "10:00 - 11:00"
+        },
+        {
+          "subject": "Operating Systems",
+          "time": "11:00 - 12:00"
+        },
+        {
+          "subject": "Natural Language Processing",
+          "time": "12:00 - 13:00"
+        }
+      ]
+    },
+    {
+      "date": "2026-12-14",
+      "sessions": [
+        {
+          "subject": "Data Structures & Algorithms",
+          "time": "09:00 - 10:00"
+        },
+        {
+          "subject": "Database Management Systems",
+          "time": "10:00 - 11:00"
+        },
+        {
+          "subject": "Operating Systems",
+          "time": "11:00 - 12:00"
+        },
+        {
+          "subject": "Natural Language Processing",
+          "time": "12:00 - 13:00"
+        }
+      ]
+    }
+  ]
+}

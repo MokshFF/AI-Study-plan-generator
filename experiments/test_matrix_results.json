@@ -1,0 +1,114 @@
+[
+  {
+    "test_id": "TC-01",
+    "name": "Normal: Multi-Subject 14-Day Plan (Evaluating 3 Criteria: Chronological, Weak Areas, Rest Day)",
+    "category": "Normal (Complex Multi-Subject)",
+    "execution_type": "Live Model Call (qwen2.5:1.5b)",
+    "expected_behavior": "Three evaluation criteria against one 14-day student profile: (1) Chronological 14-day coverage from 2026-12-01 to 2026-12-14 with all sessions scheduled on or before exam dates; (2) Prioritized review sessions allocated for weak subjects (DSA, OS) and topics (DP, Virtual Memory); (3) Scheduled rest day (2026-12-06, 0 min budget) strictly emitted as 'sessions': [] with 0 minutes allocated. Overall: 0 validation errors.",
+    "actual_output": "Criteria Results: [1. Chronological & Post-Exam: PASS - 14 days]; [2. Weak Area Focus: PASS - 16 sessions]; [3. Dec 6 Rest Day: PASS - 0 sessions]. Total Validator Errors: 0. Live run time: 77.6s.",
+    "status": "PASS",
+    "errors": []
+  },
+  {
+    "test_id": "TC-02",
+    "name": "Edge: Two Exams Scheduled on the Same Calendar Date",
+    "category": "Edge (Co-occurring Exams)",
+    "execution_type": "Output Fixture Check",
+    "expected_behavior": "Input validator permits co-occurring exam dates (DBMS and OS on Dec 3). Output schedule allows both subjects up to Dec 3 and terminates sessions for both thereafter.",
+    "actual_output": "Input validation passed (0 errors). Output schedule validated: 4 days, 0 post-exam errors.",
+    "status": "PASS",
+    "errors": []
+  },
+  {
+    "test_id": "TC-03",
+    "name": "Edge: Very Small Daily Time Budget (30 Minutes/Day)",
+    "category": "Edge (Tight Budget)",
+    "execution_type": "Output Fixture Check",
+    "expected_behavior": "Sessions scheduled respect the tight 30-minute daily budget without overrun.",
+    "actual_output": "Valid: True. Max daily duration: 30 min. 0 overruns.",
+    "status": "PASS",
+    "errors": []
+  },
+  {
+    "test_id": "TC-04",
+    "name": "Invalid Input: Exam Date Before Planning Start Date",
+    "category": "Invalid Input (Pre-generation Guardrail)",
+    "execution_type": "Input-Validation Case",
+    "expected_behavior": "Input validator rejects plan before model call: 'Subject ... has exam date before start date'.",
+    "actual_output": "Rejected pre-LLM with 1 error(s): [\"Subject 'Operating Systems' has an exam date (2026-12-05) before the planning start date (2026-12-10).\"]",
+    "status": "PASS",
+    "errors": [
+      "Subject 'Operating Systems' has an exam date (2026-12-05) before the planning start date (2026-12-10)."
+    ]
+  },
+  {
+    "test_id": "TC-05",
+    "name": "Invalid Input: Reversed Planning Dates (start_date > end_date)",
+    "category": "Invalid Input (Pre-generation Guardrail)",
+    "execution_type": "Input-Validation Case",
+    "expected_behavior": "Input validator rejects plan before model call: 'Planning start date ... cannot be later than end date'.",
+    "actual_output": "Rejected pre-LLM with 1 error(s): ['Planning date range is reversed: start date (2026-12-25) cannot be after end date (2026-12-10).']",
+    "status": "PASS",
+    "errors": [
+      "Planning date range is reversed: start date (2026-12-25) cannot be after end date (2026-12-10)."
+    ]
+  },
+  {
+    "test_id": "TC-06",
+    "name": "Invalid Output: Daily Budget Overrun in Model Response",
+    "category": "Invalid Output (Safety Layer Test)",
+    "execution_type": "Output Fixture Check",
+    "expected_behavior": "Output validator detects budget overrun and rejects: 'Budget Overrun on YYYY-MM-DD'.",
+    "actual_output": "Rejected by validator. Errors (1): ['Budget Overrun on 2026-12-01: Total study duration (160 min) exceeds the available daily budget of 120 minutes (overrun of 40 min).']",
+    "status": "PASS",
+    "errors": [
+      "Budget Overrun on 2026-12-01: Total study duration (160 min) exceeds the available daily budget of 120 minutes (overrun of 40 min)."
+    ]
+  },
+  {
+    "test_id": "TC-07",
+    "name": "Invalid Output: Missing Calendar Date in Schedule Array",
+    "category": "Invalid Output (Safety Layer Test)",
+    "execution_type": "Output Fixture Check",
+    "expected_behavior": "Output validator rejects schedule if any date in [start_date, end_date] is omitted: 'Missing date(s)...'.",
+    "actual_output": "Rejected by validator. Errors (1): ['Missing date(s) in study plan: 2026-12-02. All 3 dates in the planning window must be accounted for.']",
+    "status": "PASS",
+    "errors": [
+      "Missing date(s) in study plan: 2026-12-02. All 3 dates in the planning window must be accounted for."
+    ]
+  },
+  {
+    "test_id": "TC-08",
+    "name": "Invalid Output: Hallucinated / Unknown Subject in Session",
+    "category": "Invalid Output (Safety Layer Test)",
+    "execution_type": "Output Fixture Check",
+    "expected_behavior": "Output validator rejects session if subject is not declared: 'Unknown subject: Quantum Computing'.",
+    "actual_output": "Rejected by validator. Errors (1): [\"Date 2026-12-01, Session #1: Unknown subject 'Quantum Computing'. Allowed subjects are: Operating Systems...\"]",
+    "status": "PASS",
+    "errors": [
+      "Date 2026-12-01, Session #1: Unknown subject 'Quantum Computing'. Allowed subjects are: Operating Systems..."
+    ]
+  },
+  {
+    "test_id": "TC-09",
+    "name": "Normal: Single-Subject 3-Day Intensive Plan (Computer Networks)",
+    "category": "Normal (Single-Subject Intensive)",
+    "execution_type": "Live Model Call (qwen2.5:1.5b)",
+    "expected_behavior": "Valid 3-day schedule (Dec 1\u20133) for Computer Networks with sessions capped <= 120 min/day and 0 post-exam sessions.",
+    "actual_output": "Generated 3 days. Valid: True. Errors: []. (Live run time: 24.1s).",
+    "status": "PASS",
+    "errors": []
+  },
+  {
+    "test_id": "TC-10",
+    "name": "Edge: Non-Consecutive Custom Daily Overrides (4 Days, Dec 1: 60m, Dec 2: 180m, Dec 3: 0m, Dec 4: 90m)",
+    "category": "Edge (Custom Overrides Live Audit)",
+    "execution_type": "Live Model Call (qwen2.5:1.5b)",
+    "expected_behavior": "Demonstrates independent validator safety layer on live model run: Model outputs schedule; validator audits custom budgets and catches any daily overrun.",
+    "actual_output": "Model hallucinated 120 min on Dec 1 (60 min budget). Independent validator successfully caught overrun: ['Budget Overrun on 2026-12-01: Total study duration (120 min) exceeds the available daily budget of 60 minutes (overrun of 60 min).']. (Live run time: 23.7s).",
+    "status": "PASS",
+    "errors": [
+      "Budget Overrun on 2026-12-01: Total study duration (120 min) exceeds the available daily budget of 60 minutes (overrun of 60 min)."
+    ]
+  }
+]

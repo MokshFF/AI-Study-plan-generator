@@ -1,0 +1,53 @@
+{
+  "schedule": [
+    {
+      "date": "2026-12-01",
+      "sessions": [
+        {
+          "subject": "Software Engineering",
+          "activity": "Note Review",
+          "task": "Review Agile vs Waterfall methodologies and their pros/cons",
+          "duration_minutes": 60
+        },
+        {
+          "subject": "Software Engineering",
+          "activity": "Problem Solving",
+          "task": "Solve a sample Agile project management case study",
+          "duration_minutes": 60
+        }
+      ]
+    },
+    {
+      "date": "2026-12-02",
+      "sessions": [
+        {
+          "subject": "Software Engineering",
+          "activity": "Mock Test",
+          "task": "Practice Agile project management questions",
+          "duration_minutes": 90
+        },
+        {
+          "subject": "Cloud Computing",
+          "activity": "Practice",
+          "task": "Review and practice CI/CD pipeline concepts",
+          "duration_minutes": 60
+        }
+      ]
+    },
+    {
+      "date": "2026-12-03",
+      "sessions": []
+    },
+    {
+      "date": "2026-12-04",
+      "sessions": [
+        {
+          "subject": "Cloud Computing",
+          "activity": "Revision",
+          "task": "Review and summarize key points from the Cloud Computing course",
+          "duration_minutes": 90
+        }
+      ]
+    }
+  ]
+}

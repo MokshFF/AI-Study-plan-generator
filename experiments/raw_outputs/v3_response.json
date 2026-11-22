@@ -1,0 +1,229 @@
+{
+  "schedule": [
+    {
+      "date": "2026-12-01",
+      "sessions": [
+        {
+          "subject": "Data Structures & Algorithms",
+          "activity": "Practice",
+          "task": "Solve Dynamic Programming knapsack problems",
+          "duration_minutes": 45
+        },
+        {
+          "subject": "Data Structures & Algorithms",
+          "activity": "Note Review",
+          "task": "Review Graph Traversals (Dijkstra, Bellman-Ford)",
+          "duration_minutes": 45
+        }
+      ]
+    },
+    {
+      "date": "2026-12-02",
+      "sessions": [
+        {
+          "subject": "Data Structures & Algorithms",
+          "activity": "Practice",
+          "task": "Solve Graph Traversals (Dijkstra, Bellman-Ford)",
+          "duration_minutes": 45
+        },
+        {
+          "subject": "Data Structures & Algorithms",
+          "activity": "Note Review",
+          "task": "Review AVL Trees",
+          "duration_minutes": 45
+        }
+      ]
+    },
+    {
+      "date": "2026-12-03",
+      "sessions": [
+        {
+          "subject": "Data Structures & Algorithms",
+          "activity": "Practice",
+          "task": "Solve Dynamic Programming knapsack problems",
+          "duration_minutes": 45
+        },
+        {
+          "subject": "Data Structures & Algorithms",
+          "activity": "Note Review",
+          "task": "Review Graph Traversals (Dijkstra, Bellman-Ford)",
+          "duration_minutes": 45
+        }
+      ]
+    },
+    {
+      "date": "2026-12-04",
+      "sessions": [
+        {
+          "subject": "Data Structures & Algorithms",
+          "activity": "Practice",
+          "task": "Solve Dynamic Programming knapsack problems",
+          "duration_minutes": 45
+        },
+        {
+          "subject": "Data Structures & Algorithms",
+          "activity": "Note Review",
+          "task": "Review Graph Traversals (Dijkstra, Bellman-Ford)",
+          "duration_minutes": 45
+        }
+      ]
+    },
+    {
+      "date": "2026-12-05",
+      "sessions": [
+        {
+          "subject": "Data Structures & Algorithms",
+          "activity": "Practice",
+          "task": "Solve Dynamic Programming knapsack problems",
+          "duration_minutes": 45
+        },
+        {
+          "subject": "Data Structures & Algorithms",
+          "activity": "Note Review",
+          "task": "Review Graph Traversals (Dijkstra, Bellman-Ford)",
+          "duration_minutes": 45
+        }
+      ]
+    },
+    {
+      "date": "2026-12-06",
+      "sessions": []
+    },
+    {
+      "date": "2026-12-07",
+      "sessions": [
+        {
+          "subject": "Database Management Systems",
+          "activity": "Practice",
+          "task": "Solve Database Management Systems problems",
+          "duration_minutes": 45
+        },
+        {
+          "subject": "Database Management Systems",
+          "activity": "Note Review",
+          "task": "Review Virtual Memory diagrams",
+          "duration_minutes": 45
+        }
+      ]
+    },
+    {
+      "date": "2026-12-08",
+      "sessions": [
+        {
+          "subject": "Database Management Systems",
+          "activity": "Practice",
+          "task": "Solve Database Management Systems problems",
+          "duration_minutes": 45
+        },
+        {
+          "subject": "Database Management Systems",
+          "activity": "Note Review",
+          "task": "Review Virtual Memory diagrams",
+          "duration_minutes": 45
+        }
+      ]
+    },
+    {
+      "date": "2026-12-09",
+      "sessions": [
+        {
+          "subject": "Operating Systems",
+          "activity": "Practice",
+          "task": "Solve Operating Systems problems",
+          "duration_minutes": 45
+        },
+        {
+          "subject": "Operating Systems",
+          "activity": "Note Review",
+          "task": "Review Page Replacement Algorithms",
+          "duration_minutes": 45
+        }
+      ]
+    },
+    {
+      "date": "2026-12-10",
+      "sessions": [
+        {
+          "subject": "Operating Systems",
+          "activity": "Practice",
+          "task": "Solve Operating Systems problems",
+          "duration_minutes": 45
+        },
+        {
+          "subject": "Operating Systems",
+          "activity": "Note Review",
+          "task": "Review Page Replacement Algorithms",
+          "duration_minutes": 45
+        }
+      ]
+    },
+    {
+      "date": "2026-12-11",
+      "sessions": [
+        {
+          "subject": "Operating Systems",
+          "activity": "Practice",
+          "task": "Solve Operating Systems problems",
+          "duration_minutes": 45
+        },
+        {
+          "subject": "Operating Systems",
+          "activity": "Note Review",
+          "task": "Review Banker's Algorithm",
+          "duration_minutes": 45
+        }
+      ]
+    },
+    {
+      "date": "2026-12-12",
+      "sessions": [
+        {
+          "subject": "Natural Language Processing",
+          "activity": "Practice",
+          "task": "Solve Natural Language Processing problems",
+          "duration_minutes": 45
+        },
+        {
+          "subject": "Natural Language Processing",
+          "activity": "Note Review",
+          "task": "Review Memory Paging and Virtual Memory diagrams",
+          "duration_minutes": 45
+        }
+      ]
+    },
+    {
+      "date": "2026-12-13",
+      "sessions": [
+        {
+          "subject": "Natural Language Processing",
+          "activity": "Practice",
+          "task": "Solve Natural Language Processing problems",
+          "duration_minutes": 45
+        },
+        {
+          "subject": "Natural Language Processing",
+          "activity": "Note Review",
+          "task": "Review Memory Paging and Virtual Memory diagrams",
+          "duration_minutes": 45
+        }
+      ]
+    },
+    {
+      "date": "2026-12-14",
+      "sessions": [
+        {
+          "subject": "Natural Language Processing",
+          "activity": "Practice",
+          "task": "Solve Natural Language Processing problems",
+          "duration_minutes": 45
+        },
+        {
+          "subject": "Natural Language Processing",
+          "activity": "Note Review",
+          "task": "Review Memory Paging and Virtual Memory diagrams",
+          "duration_minutes": 45
+        }
+      ]
+    }
+  ]
+}

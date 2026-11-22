@@ -1,0 +1,242 @@
+{
+  "schedule": [
+    {
+      "date": "2026-12-01",
+      "sessions": [
+        {
+          "subject": "Data Structures & Algorithms",
+          "activity": "Theory",
+          "task": "Review previous notes and complete practice problems",
+          "duration_minutes": 60
+        },
+        {
+          "subject": "Operating Systems",
+          "activity": "Theory",
+          "task": "Study the chapter on memory management and process scheduling",
+          "duration_minutes": 60
+        }
+      ]
+    },
+    {
+      "date": "2026-12-02",
+      "sessions": [
+        {
+          "subject": "Data Structures & Algorithms",
+          "activity": "Practice",
+          "task": "Solve practice problems related to data structures and algorithms",
+          "duration_minutes": 60
+        },
+        {
+          "subject": "Operating Systems",
+          "activity": "Practice",
+          "task": "Work on practical exercises related to memory management and process scheduling",
+          "duration_minutes": 60
+        }
+      ]
+    },
+    {
+      "date": "2026-12-03",
+      "sessions": [
+        {
+          "subject": "Database Management Systems",
+          "activity": "Theory",
+          "task": "Review the chapter on database design and query optimization",
+          "duration_minutes": 60
+        },
+        {
+          "subject": "Operating Systems",
+          "activity": "Theory",
+          "task": "Study the chapter on system calls and inter-process communication",
+          "duration_minutes": 60
+        }
+      ]
+    },
+    {
+      "date": "2026-12-04",
+      "sessions": [
+        {
+          "subject": "Data Structures & Algorithms",
+          "activity": "Theory",
+          "task": "Study the chapter on advanced data structures and algorithms",
+          "duration_minutes": 60
+        },
+        {
+          "subject": "Operating Systems",
+          "activity": "Theory",
+          "task": "Review the chapter on virtual memory and file systems",
+          "duration_minutes": 60
+        }
+      ]
+    },
+    {
+      "date": "2026-12-05",
+      "sessions": [
+        {
+          "subject": "Data Structures & Algorithms",
+          "activity": "Theory/Revision",
+          "task": "Review the exam material for Data Structures & Algorithms",
+          "duration_minutes": 60
+        },
+        {
+          "subject": "Operating Systems",
+          "activity": "Practice",
+          "task": "Solve practice problems related to memory management and process scheduling",
+          "duration_minutes": 60
+        }
+      ]
+    },
+    {
+      "date": "2026-12-06",
+      "sessions": [
+        {
+          "subject": "Database Management Systems",
+          "activity": "Theory",
+          "task": "Review the chapter on database design and query optimization",
+          "duration_minutes": 60
+        },
+        {
+          "subject": "Operating Systems",
+          "activity": "Theory",
+          "task": "Study the chapter on system calls and inter-process communication",
+          "duration_minutes": 60
+        }
+      ]
+    },
+    {
+      "date": "2026-12-07",
+      "sessions": [
+        {
+          "subject": "Natural Language Processing",
+          "activity": "Theory",
+          "task": "Review the chapter on natural language processing fundamentals",
+          "duration_minutes": 60
+        },
+        {
+          "subject": "Operating Systems",
+          "activity": "Practice",
+          "task": "Work on practical exercises related to virtual memory and file systems",
+          "duration_minutes": 60
+        }
+      ]
+    },
+    {
+      "date": "2026-12-08",
+      "sessions": [
+        {
+          "subject": "Database Management Systems",
+          "activity": "Theory",
+          "task": "Review the chapter on database design and query optimization",
+          "duration_minutes": 60
+        },
+        {
+          "subject": "Operating Systems",
+          "activity": "Theory",
+          "task": "Study the chapter on virtual memory and file systems",
+          "duration_minutes": 60
+        }
+      ]
+    },
+    {
+      "date": "2026-12-09",
+      "sessions": [
+        {
+          "subject": "Natural Language Processing",
+          "activity": "Theory",
+          "task": "Review the chapter on natural language processing fundamentals",
+          "duration_minutes": 60
+        },
+        {
+          "subject": "Operating Systems",
+          "activity": "Practice",
+          "task": "Work on practical exercises related to virtual memory and file systems",
+          "duration_minutes": 60
+        }
+      ]
+    },
+    {
+      "date": "2026-12-10",
+      "sessions": [
+        {
+          "subject": "Operating Systems",
+          "activity": "Theory",
+          "task": "Study the chapter on virtual memory and file systems",
+          "duration_minutes": 60
+        },
+        {
+          "subject": "Natural Language Processing",
+          "activity": "Practice",
+          "task": "Solve practice problems related to natural language processing fundamentals",
+          "duration_minutes": 60
+        }
+      ]
+    },
+    {
+      "date": "2026-12-11",
+      "sessions": [
+        {
+          "subject": "Operating Systems",
+          "activity": "Theory",
+          "task": "Review the chapter on virtual memory and file systems",
+          "duration_minutes": 60
+        },
+        {
+          "subject": "Natural Language Processing",
+          "activity": "Theory",
+          "task": "Study the chapter on natural language processing fundamentals",
+          "duration_minutes": 60
+        }
+      ]
+    },
+    {
+      "date": "2026-12-12",
+      "sessions": [
+        {
+          "subject": "Natural Language Processing",
+          "activity": "Theory",
+          "task": "Review the chapter on natural language processing fundamentals",
+          "duration_minutes": 60
+        },
+        {
+          "subject": "Operating Systems",
+          "activity": "Practice",
+          "task": "Work on practical exercises related to virtual memory and file systems",
+          "duration_minutes": 60
+        }
+      ]
+    },
+    {
+      "date": "2026-12-13",
+      "sessions": [
+        {
+          "subject": "Operating Systems",
+          "activity": "Theory",
+          "task": "Study the chapter on virtual memory and file systems",
+          "duration_minutes": 60
+        },
+        {
+          "subject": "Natural Language Processing",
+          "activity": "Practice",
+          "task": "Solve practice problems related to natural language processing fundamentals",
+          "duration_minutes": 60
+        }
+      ]
+    },
+    {
+      "date": "2026-12-14",
+      "sessions": [
+        {
+          "subject": "Natural Language Processing",
+          "activity": "Theory",
+          "task": "Review the chapter on natural language processing fundamentals",
+          "duration_minutes": 60
+        },
+        {
+          "subject": "Operating Systems",
+          "activity": "Practice",
+          "task": "Work on practical exercises related to virtual memory and file systems",
+          "duration_minutes": 60
+        }
+      ]
+    }
+  ]
+}
