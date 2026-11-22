@@ -198,10 +198,11 @@ The seven section headings used in this Milestone 2 report were adapted directly
 
 ### 7.2 Team Contributions Matrix
 
-| Team Member | Roll Number | Role / Title | Specific Tangible Contributions |
+| Team Member | Enrollment Number | Role / Main Task | Specific Tangible Contributions |
 | :--- | :--- | :--- | :--- |
-| **`[Student 1 Name]`** *(Lead)* | `[Roll No: E22CSEUXXXX]` | Lead: Prompt Engineering & LLM Grounding | - Designed iterative prompt versions V1, V2, and V3 in `prompt_template.py`.<br>- Developed per-date Context Grounding technique eliminating post-exam hallucinations.<br>- Preserved raw model outputs and authored prompt comparison benchmarks. |
-| **`[Student 2 Name]`** | `[Roll No: E22CSEUXXXX]` | Lead: Python Validator & Business Logic | - Implemented pure-Python validation engine enforcing the 9 academic guardrails.<br>- Developed 28 automated `pytest` unit tests in `tests/test_study_plan.py`.<br>- Built 10-case test matrix execution harness (`run_test_matrix.py`). |
-| **`[Student 3 Name]`** | `[Roll No: E22CSEUXXXX]` | Lead: Streamlit Frontend & Local Ollama Integration | - Built interactive Streamlit application with sample data population and timetable views.<br>- Integrated local Ollama client with JSON mode and timeout configurability.<br>- Developed CSV timetable export and offline fixture testing mode. |
-
-*(Note: Team members, roll numbers, and Team ID are formatted with placeholders above ready for final team submission details).*
+| **Moksh Varshney** | S24CSEU619 | Leader and Prompt Engineer | - Team leadership, overall solution architecture, and prompt engineering strategy.<br/>- Designed context-grounded V3 production prompt template eliminating hallucinations.<br/>- Supervised system integration between Streamlit, Ollama, and validator. |
+| **Sidharth Kumar** | S24CSEU546 | Prompt Design & System Prompt Authoring | - Formulated V1 baseline, V2 few-shot schema, and V3 guardrail prompts in `prompt_template.py`.<br/>- Structured prompt role definitions, negative constraints, and output JSON grammar.<br/>- Benchmarked prompt token efficiency and schema compliance. |
+| **Sourav Dash** | S24CSEU0557 | Prompt Testing & Iteration Log Maintenance | - Executed empirical evaluation runs across prompt versions V1, V2, and V3.<br/>- Maintained the iteration log and preserved raw outputs in `experiments/raw_outputs/`.<br/>- Evaluated failure modes, schema discrepancies, and format compliance findings. |
+| **Sonu Satra** | S24CSEU0555 | Prototype Construction & Frontend Development | - Built and redesigned the PrepFlow Streamlit workspace layout (`app.py`).<br/>- Implemented two-column workspace, Agenda view with budget bars, and filterable Table view.<br/>- Built stale-plan detection engine and filter-aware CSV export functionality. |
+| **Arnav Thakur** | S24CSEU0699 | Video Reel Recording & Audio-Visual Presentation | - Authored the timed 120-second Milestone 2 video demonstration reel script.<br/>- Screen-recorded live Ollama execution and end-to-end prototype workflow.<br/>- Handled final reel video production, transitions, audio mixing, and submission cuts. |
+| **Jatin Kumar Yadav** | S24CSEU0688 | Python Validation Engine & Test Matrix Evaluation | - Implemented pure-Python validation engine enforcing the 9 academic guardrails (`validator.py`).<br/>- Developed 28 automated `pytest` test checks in `tests/test_study_plan.py`.<br/>- Executed and verified the 10-input prototype test matrix harness (`run_test_matrix.py`). |

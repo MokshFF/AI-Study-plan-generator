@@ -14,8 +14,8 @@
 | Attribute | Project Details |
 | :--- | :--- |
 | **Problem ID** | **C20** (AI-Powered Personalized Study Plan Generator) |
-| **Team ID** | `[Team ID: Team-XX]` *(Placeholder)* |
-| **Team Members** | 1. `[Student 1 Name - Roll No: E22CSEUXXXX]` *(Lead: Prompt Engineering & Context Grounding)*<br/>2. `[Student 2 Name - Roll No: E22CSEUXXXX]` *(Lead: Python Validator & Academic Business Logic)*<br/>3. `[Student 3 Name - Roll No: E22CSEUXXXX]` *(Lead: Streamlit Workspace & Local Ollama Integration)* |
+| **Team ID** | `[Team ID: Team-XX]` *(To be confirmed by instructor)* |
+| **Team Roster & Tasks** | 1. **Moksh Varshney** (S24CSEU619) — Leader & Prompt Engineer<br/>2. **Sidharth Kumar** (S24CSEU546) — Prompt Design & System Prompt Authoring<br/>3. **Sourav Dash** (S24CSEU0557) — Prompt Testing & Iteration Log Maintenance<br/>4. **Sonu Satra** (S24CSEU0555) — Prototype Construction & Frontend Development<br/>5. **Arnav Thakur** (S24CSEU0699) — Video Reel Recording & Audio-Visual Presentation<br/>6. **Jatin Kumar Yadav** (S24CSEU0688) — Python Validation Engine & Test Matrix Evaluation |
 | **Target User Base** | University undergraduate students preparing simultaneously for multiple end-term examinations |
 | **Target Hardware** | Standard consumer laptops (CPU-only execution via quantized local LLMs) |
 | **Execution Engine** | 100% Local Inference via Ollama (`qwen2.5:1.5b` default / `qwen3:4b` configurable) |
