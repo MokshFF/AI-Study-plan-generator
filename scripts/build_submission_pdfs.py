@@ -271,3 +271,5 @@ if __name__ == "__main__":
     build_pdf("Milestone2_Technical_Report.md", "Milestone2_Technical_Report.pdf")
     build_pdf("Milestone2_Prescribed_Report.md", "Milestone2_Prescribed_Report.pdf")
     build_pdf("M2_TeamID_ProjectTitle.md", "M2_TeamID_ProjectTitle.pdf")
+    build_pdf("M2_TeamID_ProjectTitle.md", "M2_PE-B13-06_StudyPlanGenerator.pdf")
+    build_pdf("Milestone2_Technical_Report.md", "TeamMavericks_TechnicalReport.pdf")

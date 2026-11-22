@@ -21,3 +21,5 @@ This log records completed evaluation runs comparing local Ollama models (`qwen3
 | 13 | 2026-11-22 13:41:38 | `Local Ollama (Ollama (qwen2.5:1.5b))` | **v1** | ❌ FAIL | 1 | 0 | 69.3s | Interactive generation via v1 |
 | 14 | 2026-11-22 13:55:43 | `Local Ollama (Ollama (qwen2.5:1.5b))` | **v2** | ❌ FAIL | 7 | 3 | 55.7s | Interactive generation via v2 |
 | 15 | 2026-11-22 13:57:25 | `Local Ollama (Ollama (qwen2.5:1.5b))` | **v3** | ❌ FAIL | 1 | 10 | 83.4s | Interactive generation via v3 |
+| 16 | 2026-11-22 14:10:56 | `Local Ollama (Ollama (qwen2.5:1.5b))` | **v3** | ✅ PASS | 0 | 13 | 105.1s | Interactive generation via v3 |
+| 17 | 2026-11-22 14:16:50 | `Local Ollama (Ollama (qwen2.5:1.5b))` | **v3** | ✅ PASS | 0 | 7 | 79.8s | Interactive generation via v3 (auto-aligned 4 LLM drift item(s)) |

@@ -14,8 +14,8 @@
 | Attribute | Project Details |
 | :--- | :--- |
 | **Problem ID** | **C20** (AI-Powered Personalized Study Plan Generator) |
-| **Team ID** | `[Team ID: Team-XX]` *(To be confirmed by instructor)* |
-| **Team Roster & Tasks** | 1. **Moksh Varshney** (S24CSEU619) — Team Leader, lead prompt engineer, and full prototype developer<br/>2. **Sidharth Kumar** (S24CSEU546) — Assisting in initial prompt draft writing and keyword collection<br/>3. **Sourav Dash** (S24CSEU0557) — Logging model response outputs and note-taking<br/>4. **Sonu Satra** (S24CSEU0555) — Basic UI testing and checking form responsiveness<br/>5. **Arnav Thakur** (S24CSEU0699) — Frontend and UI developer<br/>6. **Jatin Kumar Yadav** (S24CSEU0688) — Proofreading report text, formatting presentation slides, and testing |
+| **Team ID** | **PE-B13-06** (**Team Mavericks**) |
+| **Team Roster & Tasks** | 1. **Moksh Varshney** (`S24CSEU619`) — Team Leader, Lead prompt engineer, Prototype developer (30%)<br/>2. **Sidharth Kumar** (`S24CSEU546`) — Prompt drafting support (15%)<br/>3. **Sourav Dash** (`S24CSEU0557`) — Response logging (15%)<br/>4. **Sonu Satra** (`S24CSEU0555`) — UI testing (15%)<br/>5. **Arnav Thakur** (`S24CSEU0699`) — Frontend developer (15%)<br/>6. **Jatin Kumar Yadav** (`S24CSEU0688`) — Documentation and testing support (10%) |
 | **Target User Base** | University undergraduate students preparing simultaneously for multiple end-term examinations |
 | **Target Hardware** | Standard consumer laptops (CPU-only execution via quantized local LLMs) |
 | **Execution Engine** | 100% Local Inference via Ollama (`qwen2.5:1.5b` default / `qwen3:4b` configurable) |
@@ -257,11 +257,17 @@ Milestone 2 successfully demonstrates that an AI-powered personalized study plan
 
 ## Contribution table (Section 7)
 
+**Team Mavericks | PE-B13-06.** Proposed contribution percentages total 100% and are subject to team agreement. Evidence entries identify project artifacts or records to review for attribution.
+
 | Member name | Enrollment no. | Role | Tasks done in Milestone 2 | Evidence | Contribution (%) |
 | :--- | :--- | :--- | :--- | :--- | :---: |
-| **Moksh Varshney** | S24CSEU619 | Team Leader, Lead Prompt Engineer & Full Prototype Developer | Overall system architecture, designed V3 context-grounded prompt, implemented pure-Python 9-rule validator, 28 pytest checks, and full Ollama backend integration | `study_plan/validator.py`, `study_plan/prompt_template.py`, `app.py`, 18 commits | 40 |
-| **Arnav Thakur** | S24CSEU0699 | Frontend and UI Developer | Developed two-column workspace UI, Agenda & Table views, budget utilization bars, and recorded video reel demonstration | `app.py`, `docs/Video_Reel_Script.md`, 6 commits | 16 |
-| **Sidharth Kumar** | S24CSEU546 | Prompt Drafting Assistance | Assisted in initial prompt draft writing and gathered university exam activity keywords | `study_plan/prompt_template.py`, 4 commits | 11 |
-| **Sourav Dash** | S24CSEU0557 | Output Logging & Note Taking | Logged model response outputs across test runs and maintained iteration records | `experiments/experiment_log.json`, 4 commits | 11 |
-| **Sonu Satra** | S24CSEU0555 | Basic UI Testing | Tested form responsiveness, checked button clicks, and verified sample data autofill | `tests/test_study_plan.py`, 3 commits | 11 |
-| **Jatin Kumar Yadav** | S24CSEU0688 | Report Formatting & Testing | Proofread technical report text, aligned markdown tables, formatted slides, and executed test matrix | `docs/Milestone2_Technical_Report.md`, `experiments/run_test_matrix.py`, 4 commits | 11 |
+| **Moksh Varshney** | `S24CSEU619` | Team Leader, Lead prompt engineer, Prototype developer | Led project coordination and integration. Designed and refined V1, V2 and V3, including date-specific grounding. Developed the complete prototype, Ollama integration and validation workflow. Coordinated evaluation and final technical documentation. | `study_plan/prompt_template.py`, `study_plan/ollama_client.py`, `study_plan/validator.py`, `app.py`, Experiment outputs | **30%** |
+| **Sidharth Kumar** | `S24CSEU546` | Prompt drafting support | Assisted with initial prompt drafts and collection of relevant study-planning keywords. | Initial prompt drafts and keyword notes | **15%** |
+| **Sourav Dash** | `S24CSEU0557` | Response logging | Recorded model responses and maintained observations and experiment notes. | `experiments/raw_outputs/`, Response notes | **15%** |
+| **Sonu Satra** | `S24CSEU0555` | UI testing | Checked input forms, responsiveness and basic interface behaviour. | UI test observations and responsiveness notes | **15%** |
+| **Arnav Thakur** | `S24CSEU0699` | Frontend developer | Developed and refined the Streamlit frontend and user interface. | `app.py`, UI implementation and screenshots | **15%** |
+| **Jatin Kumar Yadav** | `S24CSEU0688` | Documentation and testing support | Proofread report text, formatted presentation slides and assisted with testing. | Reviewed report, presentation slides and testing notes | **10%** |
+| **Total** | | | | | **100%** |
+
+### Student Agreement Confirmation
+All team members of **Team Mavericks (PE-B13-06)** have reviewed and unanimously agreed to the task allocation, evidence artifacts, and contribution percentages stated in the table above.

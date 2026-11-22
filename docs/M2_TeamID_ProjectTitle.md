@@ -11,13 +11,13 @@
 
 | Item | Submission Details |
 | :--- | :--- |
-| **Team ID** | `Team-XX` *(Use your assigned Team ID from Milestone 1)* |
-| **Team Name** | `Team PrepFlow` *(As in Milestone 1)* |
+| **Team ID** | `PE-B13-06` |
+| **Team Name** | `Team Mavericks` |
 | **Project Title** | **AI-Powered Personalized Study Plan Generator Using Prompt Engineering** |
-| **Group / Batch** | `B13-24` *(Or your specific assigned WhatsApp batch)* |
+| **Group / Batch** | `B13` (PE-B13-06) |
 | **Course & Code** | SCSE4041: Applied AI / Prompt Engineering Mini-Project (B.Tech CSE - 5th Sem) |
 | **Institution** | School of Computer Science Engineering & Technology, Bennett University |
-| **Faculty Mentor** | Dr. / Prof. Faculty Name |
+| **Faculty Mentor** | Dr. / Prof. Faculty Mentor |
 | **Submission Deadline** | Sunday, 22 November 2026, 11:59 PM |
 | **Live Prototype Link** | [https://ai-study-plan-generator1.streamlit.app](https://ai-study-plan-generator1.streamlit.app) |
 | **GitHub Repository Link** | [https://github.com/MokshFF/AI-Study-plan-generator](https://github.com/MokshFF/AI-Study-plan-generator) |
@@ -27,9 +27,12 @@
 
 | Member Name | Enrollment Number | Role in Milestone 2 |
 | :--- | :--- | :--- |
-| **Student 1 Name** *(Lead)* | `S24CSEU1001` | Lead: Prompt Engineering & Context Grounding Architecture |
-| **Student 2 Name** | `S24CSEU1002` | Lead: Pure-Python Validation Engine & Academic Business Logic |
-| **Student 3 Name** | `S24CSEU1003` | Lead: Streamlit Presentation Layer & Cloud Deployment |
+| **Moksh Varshney** *(Team Leader)* | `S24CSEU619` | Team Leader, Lead Prompt Engineer, Prototype Developer |
+| **Sidharth Kumar** | `S24CSEU546` | Prompt Drafting Support |
+| **Sourav Dash** | `S24CSEU0557` | Response Logging |
+| **Sonu Satra** | `S24CSEU0555` | UI Testing |
+| **Arnav Thakur** | `S24CSEU0699` | Frontend Developer |
+| **Jatin Kumar Yadav** | `S24CSEU0688` | Documentation and Testing Support |
 
 ---
 
@@ -350,14 +353,19 @@ PrepFlow couples generative AI with deterministic software verification. Recogni
 
 # Section 7: Team Contribution Table
 
-| Member Name | Enrollment No. | Role in Milestone 2 | Specific Tasks Done in Milestone 2 | Concrete Evidence | Contribution (%) |
+**Team Mavericks | PE-B13-06.** Proposed contribution percentages total 100% and are subject to team agreement. Evidence entries identify project artifacts or records to review for attribution.
+
+| Member Name | Enrollment No. | Role | Tasks Done in Milestone 2 | Evidence | Contribution (%) |
 | :--- | :--- | :--- | :--- | :--- | :---: |
-| **Student 1 Name** | `S24CSEU1001` | Prompt Engineering Lead | Designed prompt templates V1, V2, and V3; engineered per-date context grounding; benchmarked prompt iterations. | `study_plan/prompt_template.py`, `experiments/raw_outputs/`, 8 GitHub commits | **35%** |
-| **Student 2 Name** | `S24CSEU1002` | Validation & Logic Lead | Implemented 9-guardrail pure-Python validator; built 28-test unit suite; developed 10-case test matrix harness. | `study_plan/validator.py`, `tests/test_study_plan.py`, `experiments/run_test_matrix.py` | **35%** |
-| **Student 3 Name** | `S24CSEU1003` | Frontend & Deployment Lead | Built Streamlit UI (Agenda/Table views); integrated local Ollama client; deployed app to Streamlit Community Cloud. | `app.py`, `study_plan/ollama_client.py`, live cloud deployment URL | **30%** |
+| **Moksh Varshney** | `S24CSEU619` | Team Leader, Lead prompt engineer, Prototype developer | Led project coordination and integration. Designed and refined V1, V2 and V3, including date-specific grounding. Developed the complete prototype, Ollama integration and validation workflow. Coordinated evaluation and final technical documentation. | `study_plan/prompt_template.py`, `study_plan/ollama_client.py`, `study_plan/validator.py`, `app.py`, Experiment outputs | **30%** |
+| **Sidharth Kumar** | `S24CSEU546` | Prompt drafting support | Assisted with initial prompt drafts and collection of relevant study-planning keywords. | Initial prompt drafts and keyword notes | **15%** |
+| **Sourav Dash** | `S24CSEU0557` | Response logging | Recorded model responses and maintained observations and experiment notes. | `experiments/raw_outputs/`, Response notes | **15%** |
+| **Sonu Satra** | `S24CSEU0555` | UI testing | Checked input forms, responsiveness and basic interface behaviour. | UI test observations and responsiveness notes | **15%** |
+| **Arnav Thakur** | `S24CSEU0699` | Frontend developer | Developed and refined the Streamlit frontend and user interface. | `app.py`, UI implementation and screenshots | **15%** |
+| **Jatin Kumar Yadav** | `S24CSEU0688` | Documentation and testing support | Proofread report text, formatted presentation slides and assisted with testing. | Reviewed report, presentation slides and testing notes | **10%** |
 | **Total** | | | | | **100%** |
 
 ---
 
 ### Student Agreement Confirmation
-All team members have reviewed and unanimously agreed to the task allocation, evidence artifacts, and contribution percentages stated in Section 7 above.
+All team members of **Team Mavericks (PE-B13-06)** have reviewed and unanimously agreed to the task allocation, evidence artifacts, and contribution percentages stated in Section 7 above.

@@ -18,8 +18,8 @@
 | **Project Name / Artifact** | **PrepFlow** (Personalized Exam Study Plan & Pacing Assistant) |
 | **Course & Semester** | Prompt Engineering — Applied AI Mini-Project (B.Tech CSE, 5th Semester) |
 | **Institution** | Bennett University, Greater Noida |
-| **Team ID** | `[Team ID: Team-XX]` |
-| **Team Members & Roll Numbers** | 1. `[Student 1 Name - Roll No: E22CSEUXXXX]` *(Lead: Prompt Engineering & LLM Context Grounding)*<br/>2. `[Student 2 Name - Roll No: E22CSEUXXXX]` *(Lead: Pure-Python Validation Engine & Business Logic)*<br/>3. `[Student 3 Name - Roll No: E22CSEUXXXX]` *(Lead: Streamlit UI & Local Ollama / Cloud Deployment)* |
+| **Team ID** | **PE-B13-06** (**Team Mavericks**) |
+| **Team Members & Roll Numbers** | 1. **Moksh Varshney** (`S24CSEU619`) — Team Leader, Lead prompt engineer, Prototype developer (30%)<br/>2. **Sidharth Kumar** (`S24CSEU546`) — Prompt drafting support (15%)<br/>3. **Sourav Dash** (`S24CSEU0557`) — Response logging (15%)<br/>4. **Sonu Satra** (`S24CSEU0555`) — UI testing (15%)<br/>5. **Arnav Thakur** (`S24CSEU0699`) — Frontend developer (15%)<br/>6. **Jatin Kumar Yadav** (`S24CSEU0688`) — Documentation and testing support (10%) |
 | **Repository URL** | [https://github.com/MokshFF/AI-Study-plan-generator](https://github.com/MokshFF/AI-Study-plan-generator) |
 | **Live Cloud Prototype Link** | [https://ai-study-plan-generator1.streamlit.app](https://ai-study-plan-generator1.streamlit.app) |
 | **Local Model Engine** | 100% Local Inference via Ollama (`qwen2.5:1.5b` default / `qwen3:4b` configurable) |
@@ -308,11 +308,20 @@ Unconstrained LLMs frequently schedule 10+ hours per day without breaks. Our V3 
 
 ## Section 8: Team Contributions & Task Allocation Matrix
 
-| Team Member | Roll Number | Role / Title | Specific Tangible Contributions |
-| :--- | :--- | :--- | :--- |
-| **`[Student 1 Name]`** *(Lead)* | `[Roll No: E22CSEUXXXX]` | Lead: Prompt Engineering & LLM Grounding | - Designed iterative prompt versions V1, V2, and V3 in `study_plan/prompt_template.py`.<br/>- Developed per-date Context Grounding technique eliminating post-exam hallucinations.<br/>- Authored empirical prompt comparison benchmarks and preserved raw outputs. |
-| **`[Student 2 Name]`** | `[Roll No: E22CSEUXXXX]` | Lead: Python Validator & Academic Business Logic | - Implemented pure-Python validation engine enforcing the 9 academic guardrails (`validator.py`).<br/>- Developed 28 automated `pytest` unit tests in `tests/test_study_plan.py`.<br/>- Built 10-case test matrix execution harness (`experiments/run_test_matrix.py`). |
-| **`[Student 3 Name]`** | `[Roll No: E22CSEUXXXX]` | Lead: Streamlit Frontend & Local Ollama / Cloud Deployment | - Built interactive Streamlit UI with Agenda View, Table View, and CSV export (`app.py`).<br/>- Integrated local Ollama client with JSON mode and timeout configurability.<br/>- Deployed 24/7 prototype on Streamlit Community Cloud with automatic demo fallback. |
+**Team Mavericks | PE-B13-06.** Proposed contribution percentages total 100% and are subject to team agreement. Evidence entries identify project artifacts or records to review for attribution.
+
+| Member Name | Enrollment No. | Role | Tasks Done in Milestone 2 | Evidence | Contribution (%) |
+| :--- | :--- | :--- | :--- | :--- | :---: |
+| **Moksh Varshney** | `S24CSEU619` | Team Leader, Lead prompt engineer, Prototype developer | Led project coordination and integration. Designed and refined V1, V2 and V3, including date-specific grounding. Developed the complete prototype, Ollama integration and validation workflow. Coordinated evaluation and final technical documentation. | `study_plan/prompt_template.py`, `study_plan/ollama_client.py`, `study_plan/validator.py`, `app.py`, Experiment outputs | **30%** |
+| **Sidharth Kumar** | `S24CSEU546` | Prompt drafting support | Assisted with initial prompt drafts and collection of relevant study-planning keywords. | Initial prompt drafts and keyword notes | **15%** |
+| **Sourav Dash** | `S24CSEU0557` | Response logging | Recorded model responses and maintained observations and experiment notes. | `experiments/raw_outputs/`, Response notes | **15%** |
+| **Sonu Satra** | `S24CSEU0555` | UI testing | Checked input forms, responsiveness and basic interface behaviour. | UI test observations and responsiveness notes | **15%** |
+| **Arnav Thakur** | `S24CSEU0699` | Frontend developer | Developed and refined the Streamlit frontend and user interface. | `app.py`, UI implementation and screenshots | **15%** |
+| **Jatin Kumar Yadav** | `S24CSEU0688` | Documentation and testing support | Proofread report text, formatted presentation slides and assisted with testing. | Reviewed report, presentation slides and testing notes | **10%** |
+| **Total** | | | | | **100%** |
+
+### Student Agreement Confirmation
+All team members of **Team Mavericks (PE-B13-06)** have reviewed and unanimously agreed to the task allocation, evidence artifacts, and contribution percentages stated in Section 8 above.
 
 ---
 

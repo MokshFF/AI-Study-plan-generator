@@ -208,5 +208,33 @@
     "total_minutes_scheduled": 1515,
     "latency_seconds": 83.4,
     "notes": "Interactive generation via v3"
+  },
+  {
+    "run_id": 16,
+    "timestamp": "2026-11-22 14:10:56",
+    "engine": "Local Ollama",
+    "model": "Ollama (qwen2.5:1.5b)",
+    "prompt_version": "v3",
+    "dataset": "User Planner Configuration",
+    "status": "PASS",
+    "errors_count": 0,
+    "warnings_count": 13,
+    "total_minutes_scheduled": 1170,
+    "latency_seconds": 105.1,
+    "notes": "Interactive generation via v3"
+  },
+  {
+    "run_id": 17,
+    "timestamp": "2026-11-22 14:16:50",
+    "engine": "Local Ollama",
+    "model": "Ollama (qwen2.5:1.5b)",
+    "prompt_version": "v3",
+    "dataset": "User Planner Configuration",
+    "status": "PASS",
+    "errors_count": 0,
+    "warnings_count": 7,
+    "total_minutes_scheduled": 2190,
+    "latency_seconds": 79.8,
+    "notes": "Interactive generation via v3 (auto-aligned 4 LLM drift item(s))"
   }
 ]
